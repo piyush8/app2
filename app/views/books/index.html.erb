@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<% if @books.blank? %>
+  <h4>There are no book containing the term <%= params[:search] %>.</h4>
+<% end %>
 <h1>Books</h1>
 
 <table>
